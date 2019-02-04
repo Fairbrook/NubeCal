@@ -1,35 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>Calculadora para Marcas</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<script src="./function.js"></script>
 </head>
 <body>
-	<div>
-		<div>
-			<div>Precio Diseñadora</div>
-			<input type="number" id="preciod" onchange="inicial()">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 center-align">
+				<h3>Calculadora para marcas</h3>
+			</div>
 		</div>
-		<div>
-			<div>Aumento %</div>
-			<input type="number" id="porcentaje" value="50">
+
+		<div class="row">
+
+			<div class="col s12 m5 l3">
+				<div class="card">
+					<div class="card-content">
+						<div class="input-field">
+							<input type="text" id="preciod" onchange="inicial(this)" />
+							<label for="preciod">Precio de Diseñadora</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col s12 m2 l1 center-align">
+				<div class="hide-on-small-only center-align">
+					<h1 class="center-align">+</h1>
+				</div>
+			</div>
+
+			<div class="col s12 m5 l3 ">
+				<div class="card">
+					<div class="card-content">
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" value="50" id="porcentaje" onchange="porcentaje()" />
+								<label for="porcentaje">Aumento %</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input disabled="true" type="text" id="aumento">
+								<label for="aumento">Aumento $</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+			<div class="col s12 m3 l1">
+				<div class="center-align hide-on-small-only">
+					<h1>=</h1>
+				</div>
+			</div>
+
+			<div class="col s12 m9 l4">
+				<div class="card">
+					<div class="card-content">
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="preciop" onchange="final(this)">
+								<label for="preop">Precio Al Público</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="descuento" onchange="descuento(this)" value="0">
+								<label for="descuento">Descuento %</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="input-field col s12">
+								<input type="text" id="preciopd" onchange="finalDescuento(this)">
+								<label for="preciopd">Precio Al Público (con descuento)</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div>
-			<div>Aumento $</div>
-			<div id="aumento"></div>
-		</div>
-		<div>
-			<div>Precio publico</div>
-			<input type="number" id="preciop" onchange="final()">
-		</div>
-		<div>
-			<div>Descuento %</div>
-			<input type="number" id="descuento" onchange="descuento()">
-		</div>
-		<div>
-			<div>Precio publico (con descuento)</div>
-			<div id="preciopd"></div>
+		<div class="row">
+			<div class="col s12 center-align">
+				<a class="waves-effect waves-light btn" onclick="porcentaje()">calcular</a>
+			</div>
 		</div>
 	</div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Favor de solo ingresar números</h4>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+ 
 </body>
 </html>
