@@ -27,7 +27,7 @@ function inicial(campoInit) {
 	if(!check(campoInit))return;
 
 	var precioFin = ((incr.value/100)+1)*campoInit.value;
-	campoFin.value = precioFin;
+	campoFin.value = precioFin.toFixed(2);
 	aumento(campoInit,campoFin);
 	descuento(campoDes);
 }
@@ -41,16 +41,16 @@ function final(campoFin) {
 	if(!check(campoFin))return;
 
 	precio = (1-(campoDes.value/100))*campoFin.value;
-	campoFinDes.value = precio;
+	campoFinDes.value = precio.toFixed(2);
 
 	var precioInit = precio/((incr.value/100)+1);
-	campoInit.value = precioInit;
+	campoInit.value = precioInit.toFixed(2);
 	aumento(campoInit,campoFinDes);
 }
 
 function aumento(campoInit,campoFin){
 	var campoRise = document.getElementById('aumento');
-	campoRise.value = (campoFin.value - campoInit.value);
+	campoRise.value = (campoFin.value - campoInit.value).toFixed(2);
 }
 
 function descuento(campoDes){
