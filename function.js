@@ -68,8 +68,8 @@ function finalDescuento(campoFinDes){
 	if(!check(campoFinDes))return;
 
 	var precio = (campoFinDes.value*100)/(100-campoDes.value);
-	campoFin.value = precio;
-	final(campoFinDes);
+	campoFin.value = precio.toFixed(2);
+	final(campoFin);
 }
 
 function porcentaje(){
