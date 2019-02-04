@@ -6,7 +6,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	<script src="./function.js"></script>
-	
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -24,7 +24,7 @@
 				<div class="card">
 					<div class="card-content">
 						<div class="input-field">
-							<input type="text" id="preciod" onchange="inicial(this)" />
+							<input type="text" id="preciod" onchange="inicial(this)" placeholder="Precio Inicial" />
 							<label for="preciod">Precio de Diseñadora</label>
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								<input disabled="true" type="text" id="aumento">
+								<input disabled="true" type="text" id="aumento" placeholder="Ganancia Nube">
 								<label for="aumento">Aumento $</label>
 							</div>
 						</div>
@@ -68,7 +68,7 @@
 					<div class="card-content">
 						<div class="row">
 							<div class="input-field col s12">
-								<input type="text" id="preciop" onchange="final(this)">
+								<input type="text" id="preciop" onchange="final(this)" placeholder="Publico">
 								<label for="preop">Precio Al Público</label>
 							</div>
 						</div>
@@ -80,7 +80,7 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								<input type="text" id="preciopd" onchange="finalDescuento(this)">
+								<input type="text" id="preciopd" onchange="finalDescuento(this)" placeholder="Precio Final">
 								<label for="preciopd">Precio Al Público (con descuento)</label>
 							</div>
 						</div>
@@ -105,6 +105,6 @@
 		</div>
 	</div>
 
-	
+
 </body>
 </html>
