@@ -6,24 +6,30 @@
 </head>
 <body>
 	<div>
-		<div>Nombre:</div>
-		<input type="text" id="name" onchange="change()">
-	</div>
-	<div>
-		<div>Precio Diseñadora</div>
-		<input type="number" id="preciod">
-	</div>
-	<div>
-		<div>Aumento %</div>
-		<input type="number" id="porcentaje">
-	</div>
-	<div>
-		<div>Aumento $</div>
-		<div id="aumento"></div>
-	</div>
-	<div>
-		<div>Precio publico</div>
-		<input type="number" id="preciop">
+		<div>
+			<div>Precio Diseñadora</div>
+			<input type="number" id="preciod" onchange="inicial()">
+		</div>
+		<div>
+			<div>Aumento %</div>
+			<input type="number" id="porcentaje" value="50">
+		</div>
+		<div>
+			<div>Aumento $</div>
+			<div id="aumento"></div>
+		</div>
+		<div>
+			<div>Precio publico</div>
+			<input type="number" id="preciop" onchange="final()">
+		</div>
+		<div>
+			<div>Descuento %</div>
+			<input type="number" id="descuento" onchange="descuento()">
+		</div>
+		<div>
+			<div>Precio publico (con descuento)</div>
+			<div id="preciopd"></div>
+		</div>
 	</div>
 </body>
 </html>
